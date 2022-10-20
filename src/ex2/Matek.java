@@ -2,7 +2,13 @@ package ex2;
 
 public class Matek {
 	private double _eredmeny=0;
-
+	public String name;
+	static private Matek matek;
+	
+	public Matek(String n) {
+		name = n;
+	}
+	
     public double osszead(double[] szamok,String ember){
         int[] tomb1 = {2,5,8};
         try {
@@ -21,6 +27,10 @@ public class Matek {
         return _eredmeny;
     }
     
+    public void setName(String n) {
+    	name= n;
+    }
+    
     public int bintodec(String kettes){ //11011
         int result =0;
         char[] szamjegyek = kettes.toCharArray();
@@ -33,5 +43,14 @@ public class Matek {
         }
         return result;
     }
-
+    
+//    public static Matek createInstance() {
+//    	if( matek == null) {
+//    		matek = new Matek();
+//    		return matek;
+//    	} else {
+//    		return matek;
+//    	}   	
+//    }
+    
 }
